@@ -25,8 +25,8 @@
             <input type="number" min="1" step="1" id="quantidade" class="form-control" value="1" required/>
         </div>
         
+        <label for="valor">Valor</label>
         <div class="form-group">
-            <label for="valor">Valor</label>
             <input id="valor" type="number" class="form-control"  min="0.01" step="0.01" value="0.0" required />
         </div>
         
@@ -34,7 +34,7 @@
     </form>
     
     <div class="text-center">
-        <button class="btn btn-primary text-center" type="button">
+        <button onclick="negociacaoController.importaNegociacoes()" class="btn btn-primary text-center" type="button">
             Importar Negociações
         </button>
         <button onclick="negociacaoController.apaga()"  class="btn btn-primary text-center" type="button">
@@ -56,6 +56,8 @@
     <script src="js/app/views/MensagemView.js"></script>
     <script src="js/app/services/ProxyFactory.js"></script>
     <script src="js/app/helpers/Bind.js"></script>
+    <script src="js/app/services/NegociacaoService.js"></script>
+    <script src="js/app/services/HttpService.js"></script>
     <script>
         let negociacaoController = new NegociacaoController();
     </script>
